@@ -1,12 +1,23 @@
 # About this project
 
 This is a basic priorities CRUD API which is still a work in progress. 
+written in golang and works with PostgreSQL. It has 2 apps - database migrations and API.
 
+Database migrations can be created (up) and reverted (down). Migration files have to be added manually to their respective directory "Migrations" and have the following naming convention: 00X_What_Changed.direction.sql
+
+004_Created_Priorities_Table.up.sql
+
+## Current endpoints:
+/v1/priorities GET, POST, PUT, DELETE
+
+## Current state:
 It builds and it runs.
 
 What's left to do:
+- authentication
 - unit tests
 - add CI/CD
+- add Swagger
 
 # How to run this API
 
