@@ -39,11 +39,14 @@ CREATE SCHEMA lo AUTHORIZATION myuser;
 ```
 
 ### 4. Grant user permissions
+
+```
 GRANT USAGE ON SCHEMA lo TO myuser;
 GRANT CREATE ON SCHEMA lo TO myuser;
 GRANT SELECT, INSERT, UPDATE, DELETE ON ALL TABLES IN SCHEMA lo TO myuser;
 GRANT EXECUTE ON ALL FUNCTIONS IN SCHEMA lo TO myuser;
 GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA lo TO myuser;
+```
 
 ### 5. Set your DATABASE_URL environment variable
 export DATABASE_URL="postgresql://username:password@localhost/dbname?sslmode=disable"
